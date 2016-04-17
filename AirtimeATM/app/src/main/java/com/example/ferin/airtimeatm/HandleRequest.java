@@ -1,14 +1,14 @@
-package com.example.ferin.airtimeatm.domainEvent;
+package com.example.ferin.airtimeatm;
 
+
+import android.content.Intent;
+import android.net.Uri;
 
 import com.example.ferin.airtimeatm.domain.appUser.AppUser;
 import com.example.ferin.airtimeatm.domain.networkCode.NetworkCodes;
 import com.example.ferin.airtimeatm.factories.networkCode.NetworkCodeFactory;
+import com.example.ferin.airtimeatm.factories.transaction.TransactionDataFactory;
 
-/*
- * actually make the call
- *  m = my number, y = your number etc
- */
 
 public class HandleRequest {
 
@@ -21,7 +21,7 @@ public class HandleRequest {
         return networkCodes;
     }
 
-    public static String prepareString(int request)
+    public static String prepareString(int request, String value)
     {
         switch(request)
         {
@@ -35,6 +35,8 @@ public class HandleRequest {
                 break;
             case 4 : transaction = networkCodes.getTransfer();
         }
+         transaction = TransactionDataFactory.setTransactionData(transaction, value);
         return transaction;
     }
+
 }

@@ -1,11 +1,13 @@
 package com.example.ferin.airtimeatm.domain.networkCode;
 
-import com.example.ferin.airtimeatm.domain.network.CellphoneNetwork;
+
+import java.io.Serializable;
 
 /**
  * Created by Ferin on 2016-04-16.
  */
-public class NetworkCodes {
+public class NetworkCodes implements Serializable{
+
     private String balanceEnquiry;
     private String pcm;
     private String recharge;

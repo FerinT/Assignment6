@@ -3,10 +3,13 @@ package com.example.ferin.airtimeatm.domain.network;
 import com.example.ferin.airtimeatm.domain.networkCode.NetworkCodes;
 import com.example.ferin.airtimeatm.factories.networkCode.NetworkCodeFactory;
 
+import java.io.Serializable;
+
 /**
  * Created by Ferin on 2016-04-16.
  */
-public class CellphoneNetwork {
+public class CellphoneNetwork implements Serializable{
+
     private long id;
     private String networkName;
     private NetworkCodes networkCodes;

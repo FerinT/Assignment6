@@ -13,7 +13,7 @@ public class Mtn extends NetworkCodeFactory {
         NetworkCodes codes = new NetworkCodes.Builder()
                 .balanceEnquiry("*141#")
                 .recharge("*141*P#")
-                .transfer("*141*6328*amt#")
+                .transfer("*141*6328*AMT#")
                 .menu("*141#")
                 .pcm("*121*Y#")
                 .build();

@@ -1,4 +1,4 @@
-package com.example.ferin.airtimeatm.domainEvent;
+package com.example.ferin.airtimeatm;
 
 import android.content.Context;
 import android.telephony.TelephonyManager;
